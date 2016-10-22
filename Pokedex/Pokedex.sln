@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex", "Pokedex\Pokedex.csproj", "{0E83FF20-C601-4314-AE50-049C6B19E2A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokedexAnalyzer", "PokedexAnalyzer\PokedexAnalyzer\PokedexAnalyzer.csproj", "{616EA723-EC81-4CAD-9EE2-FCEA59B8DA08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokedexAnalyzer.Test", "PokedexAnalyzer\PokedexAnalyzer.Test\PokedexAnalyzer.Test.csproj", "{7C794858-8781-409D-9C03-DA820C247609}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokedexAnalyzer.Vsix", "PokedexAnalyzer\PokedexAnalyzer.Vsix\PokedexAnalyzer.Vsix.csproj", "{F426ACCC-891E-4BE9-8F2A-655EB0A64A06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{0E83FF20-C601-4314-AE50-049C6B19E2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E83FF20-C601-4314-AE50-049C6B19E2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E83FF20-C601-4314-AE50-049C6B19E2A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616EA723-EC81-4CAD-9EE2-FCEA59B8DA08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616EA723-EC81-4CAD-9EE2-FCEA59B8DA08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616EA723-EC81-4CAD-9EE2-FCEA59B8DA08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616EA723-EC81-4CAD-9EE2-FCEA59B8DA08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C794858-8781-409D-9C03-DA820C247609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C794858-8781-409D-9C03-DA820C247609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C794858-8781-409D-9C03-DA820C247609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C794858-8781-409D-9C03-DA820C247609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F426ACCC-891E-4BE9-8F2A-655EB0A64A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F426ACCC-891E-4BE9-8F2A-655EB0A64A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F426ACCC-891E-4BE9-8F2A-655EB0A64A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F426ACCC-891E-4BE9-8F2A-655EB0A64A06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

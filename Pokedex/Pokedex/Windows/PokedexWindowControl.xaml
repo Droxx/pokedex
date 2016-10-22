@@ -23,7 +23,7 @@
                                             <ColumnDefinition Width="30" />
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Text="{Binding Id}"></TextBlock>
+                                        <TextBlock Text="{Binding Id}" FontWeight="{Binding DisplayFontWeight}"></TextBlock>
                                         <Image Grid.Column="1" Height="30" Width="30" Source="{Binding Img}"></Image>
                                         <TextBlock Grid.Column="2" Text="{Binding Name}" />
                                     </Grid>

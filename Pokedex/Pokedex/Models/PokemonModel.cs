@@ -14,7 +14,10 @@ namespace Pokedex.Models
         public IEnumerable<TypeModel> Types { get; set; }
         public double Height { get; set; }
         public double Weight { get; set; }
-        
+        public bool Caught { get; set; }
+
+        public string DisplayFontWeight { get { return Caught ? "Bold" : "Normal"; } }
+
         // MIDI Cry?
         public string Img { get { return $"/Pokedex;component/Imges/{Id}.png"; } }
     }

@@ -53,8 +53,6 @@
   <ItemGroup>
     <Compile Include="Data\CsvPokemonMapping.cs" />
     <Compile Include="Data\PokemonFactory.cs" />
-    <Compile Include="Editor\PokeMonitor.cs" />
-    <Compile Include="Editor\PokeMonitorTextViewCreationListener.cs" />
     <Compile Include="Models\PokemonModel.cs" />
     <Compile Include="Models\TypeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +61,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\PokemonViewModel.cs" />
     <Compile Include="Windows\PokedexWindow.cs" />
     <Compile Include="Windows\PokedexWindowCommand.cs" />
     <Compile Include="Windows\PokedexWindowControl.xaml.cs">

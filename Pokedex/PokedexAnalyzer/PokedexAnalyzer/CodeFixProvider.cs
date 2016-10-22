@@ -18,7 +18,7 @@ namespace PokedexAnalyzer
     [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(PokedexAnalyzerCodeFixProvider)), Shared]
     public class PokedexAnalyzerCodeFixProvider : CodeFixProvider
     {
-        private const string title = "Make uppercase";
+        private const string title = "Open Pokedex";
 
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
@@ -43,12 +43,12 @@ namespace PokedexAnalyzer
             var declaration = root.FindToken(diagnosticSpan.Start).Parent.AncestorsAndSelf().OfType<TypeDeclarationSyntax>().First();
 
             // Register a code action that will invoke the fix.
-            context.RegisterCodeFix(
-                CodeAction.Create(
-                    title: title,
-                    createChangedSolution: c => MakeUppercaseAsync(context.Document, declaration, c),
-                    equivalenceKey: title),
-                diagnostic);
+            //context.RegisterCodeFix(
+            //    CodeAction.Create(
+            //        title: title,
+            //        createChangedSolution: c => MakeUppercaseAsync(context.Document, declaration, c),
+            //        equivalenceKey: title),
+            //    diagnostic);
         }
 
         private async Task<Solution> MakeUppercaseAsync(Document document, TypeDeclarationSyntax typeDecl, CancellationToken cancellationToken)

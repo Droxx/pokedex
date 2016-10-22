@@ -8,27 +8,35 @@ namespace Pokedex.Windows
 {
     using Data;
     using Models;
+    using System;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Windows;
     using System.Windows.Controls;
-
-    /// <summary>
-    /// Interaction logic for PokedexWindowControl.
-    /// </summary>
+    using System.Windows.Threading;
+    using PokedexAnalyzer;
+    using System.Collections.ObjectModel;
+    using System.ComponentModel;
+    using ViewModels;/// <summary>
+                     /// Interaction logic for PokedexWindowControl.
+                     /// </summary>
     public partial class PokedexWindowControl : UserControl
     {
+        PokemonViewModel pvm = new PokemonViewModel();
         /// <summary>
         /// Initializes a new instance of the <see cref="PokedexWindowControl"/> class.
         /// </summary>
         public PokedexWindowControl()
         {
             this.InitializeComponent();
+            icPokemon.DataContext = pvm;
 
-            List<PokemonModel> items = PokemonFactory.GetPokemon().ToList();
-            icPokemon.ItemsSource = items;
-        }
+            DispatcherTimer dt = new DispatcherTimer();
+            dt.Tick += new EventHandler(pvm.Tick);
+            dt.Interval = new TimeSpan(0, 0, 1);
+            dt.Start();
+        }        
 
         /// <summary>
         /// Handles click on the button by displaying a message box.

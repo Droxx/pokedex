@@ -16,6 +16,6 @@ namespace Pokedex.Models
         public double Weight { get; set; }
         
         // MIDI Cry?
-        public string Img { get { return $"Images/sprites/{Id}.png"; } }
+        public string Img { get { return $"/Pokedex;component/Imges/{Id}.png"; } }
     }
 }

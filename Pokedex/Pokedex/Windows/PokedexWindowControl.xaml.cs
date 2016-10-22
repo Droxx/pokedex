@@ -28,7 +28,6 @@ namespace Pokedex.Windows
 
             List<PokemonModel> items = PokemonFactory.GetPokemon().ToList();
             icPokemon.ItemsSource = items;
-
         }
 
         /// <summary>

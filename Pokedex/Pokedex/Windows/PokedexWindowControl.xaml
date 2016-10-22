@@ -3,29 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:properties="clr-namespace:Pokedex.Properties"
              Background="{DynamicResource VsBrush.Window}"
              Foreground="{DynamicResource VsBrush.WindowText}"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300"
              Name="MyToolWindow">
+    <UserControl.Resources>
+        <BitmapImage x:Key="bulba" UriSource="../Images/sprites/1.png" />
+    </UserControl.Resources>
     <Grid>
         <TabControl>
             <TabItem Name="tiPokedex" Header="Pokedex">
                 <Grid>
-                    <ItemsControl Name="icPokemon">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Margin="0,0,0,5">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="20" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Text="IMG" />
-                                    <TextBlock Text="{Binding Name}" />
-                                </Grid>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Source="{StaticResource bulba}" Height="50" Width="50"></Image>
+                    <Grid Grid.Row="1">
+                        <ScrollViewer>
+                            <ItemsControl Name="icPokemon">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0,0,0,5">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="20" />
+                                                <ColumnDefinition Width="30" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="{Binding Id}"></TextBlock>
+                                            <Image Grid.Column="1" Source="{Binding Img}"></Image>
+                                            <TextBlock Grid.Column="2" Text="{Binding Name}" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+                    </Grid>
                 </Grid>
             </TabItem>
             <TabItem Name="tiDetails" Header="Details">

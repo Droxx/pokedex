@@ -6,9 +6,11 @@
 
 namespace Pokedex.Windows
 {
+    using Data;
     using Models;
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
+    using System.Linq;
     using System.Windows;
     using System.Windows.Controls;
 
@@ -24,11 +26,7 @@ namespace Pokedex.Windows
         {
             this.InitializeComponent();
 
-            List<PokemonModel> items = new List<PokemonModel>();
-            items.Add(new PokemonModel() { Name = "Charmander"});
-            items.Add(new PokemonModel() { Name = "Bulbasaur"});
-            items.Add(new PokemonModel() { Name = "Squirtle"});
-
+            List<PokemonModel> items = PokemonFactory.GetPokemon().ToList();
             icPokemon.ItemsSource = items;
 
         }

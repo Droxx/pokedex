@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pokedex.Models
 {
-    class TypeModel
+    public class TypeModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
